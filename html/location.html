@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Location</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            background: -webkit-linear-gradient(#000d26,#0656d6);-webkit-background-clip: text;
+        /*-webkit-text-fill-color: transparent;*/
+     font-family: 'Noto Sans', sans-serif;
+      color: white;
+      }
+        .navbar {
+      background-color: transparent;
+      color: white;
+      font-size: 20px;
+      text-align: center;
+    }
+
+    #intro .nav {
+      margin-top: 20rem;
+    }
+        #carousel_a {
+            margin-top: 50px;
+        }
+        footer {
+            background-color: white;
+            width: 100%;
+            text-align: center;
+            margin-top:10rem;
+        }
+        #map {
+            height: 36rem;
+        }
+        #content {
+            margin-top: 15rem;
+        }
+        .fa {
+            color: white;
+            padding: 20px;
+            margin: 10px;
+        }
+        input{
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+ <section id="intro">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <a class="navbar-brand" href="#"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./product.html">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./learn.html">Learn</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="./hireus.html">Hire Us</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link " href="./location.html">Contact US</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0 ">
+          <button class="btn btn-outline-success my-2 my-sm-0 justify-content-end" type="submit">Sign in</button>
+        </form>
+      </div>
+    </nav>
+<hr style="margin-top: 60px;">
+</section>
+    <section id="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <div id="map">
+
+                    </div>
+                </div>
+                <div class="col-6">
+                    <h1>Feedback</h1>
+                    <div class="row">
+                        <div class="col-6">
+                            <input type="text" placeholder="Your name:" id="name" required="true">
+                            <input type="tel" placeholder="Telephone:" id="name" maxlength="10" minlength="10" required="true">
+                            <input type="mail" placeholder="E-mail:" id="name"  required="true">
+                        </div>
+                        <div class="col-6">
+                            <textarea  placeholder="Suggestion" style="margin-top: 30px;">
+                            </textarea>
+                            <button type="submit" class="btn btn-primary" style="margin: 20px; margin-left: 6rem;">Submit</button>
+                        </div>
+                        <div class="col-7" style="margin-top:40px;">
+                            <h1>Visit us:</h1>
+                            <h5>115 Nuwara illya Highway
+                                Monroeville ,SA 15146.<br><br>Email: Hello@temps.com<br>Call: 121354679
+                                <br>Fax:647895621<br><br>Timings:<br>Mon-Fri: 10:30 am - 5:00 pm<br>Sunday:closed</h5>   
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p text-align:center> Follow Us On:</p> <span id="Social Media"></span>
+        <a href="#" class="fa fa-facebook" style="background: #3B5998;"></a>
+        <a href="#" class="fa fa-twitter" style="background: #55ACEE;"></a>
+        <a href="#" class="fa fa-google" style="background: #dd4b39;"></a>
+        <a href="#" class="fa fa-linkedin" style="background: #007bb5;"></a>
+        <a href="#" class="fa fa-youtube" style="background: red;"></a>
+    </footer>
+</body>
+<script>
+    let map;
+    function initMap() {
+        map = new google.maps.Map(document.getElementById("map"), {
+            center: { lat: 10.0425, lng: 80.2707 },
+            zoom: 8,
+        });
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+    integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+    crossorigin="anonymous"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&libraries=&v=weekly"
+    async></script>
+
+</html>
